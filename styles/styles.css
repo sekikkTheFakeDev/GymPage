@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+@font-face {
+    font-family: ATWTTSF;
+    src: url("./fonts/AllTheWayToTheSun-o2O0.ttf")
+}
+
+/* ----------------------------------------------- ROOT --------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    --text-color: #CFCCCA;
+    --header-color: #EDEBEA;
+    --dark-color: #151515;
+    --light-color: #E4E4E4;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #272727;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #DC2121;
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #CD1C1C;
+  }
+
+@keyframes home-p {
+    from {
+        opacity: 0%;
+        transform: translateY(-200%);
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes home-title {
+    from {
+        transform: translateX(-200%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes navbar-anim {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ----------------------------------------------- HOME --------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+}
+
+#home {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./images/bg.jpg"); 
+    height: 100vh; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    overflow-x: hidden; 
+    position: relative;
+}
+
+.text {
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40vw, -35%);
+}
+
+.text h1 {
+    font-size: 60px;
+    font-family: ATWTTSF;
+    color: var(--header-color);
+    animation: home-title 1s;
+}
+
+.text p {
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: Raleway;
+    color: var(--header-color);
+    animation: home-p 1s;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;  
+    opacity: 0%;
+}
+
+/* ---------------------------------------NAVBAR----------------------------------*/
+
+.navbar {
+    animation: navbar-anim 1s;
+    margin-top: -.30%;
+    background: rgba(0,0,0,.2);
+}
+
+.navbar p {
+    color: whitesmoke;
+    font-size: 60px;
+    margin-left: 70px;
+    margin-top: 5px;
+}
+
+.navbar ul{
+    float: right;
+    padding: 0;
+    text-align: center;
+    padding: 22px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: -2.5px;
+    font-size: 20px;
+    font-family: Manrope;
+    height: 50px;
+}
+
+.navbar ul li a {
+    color: var(--text-color);
+    cursor: pointer !important;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    outline: none !important;
+    border-bottom: 2px solid #cdcdcd;
+}
+
+/* --------------------------------------- ABOUT US ----------------------------------*/
+
+#about {
+    height: 70vh;
+    padding: 50px;
+    background: var(--light-color);
+    overflow: hidden;
+}
+
+.about-row {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.man, .woman {
+    width: 325px;
+    height: 600px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 1s ease;
+}
+
+.man-img , .woman-img {
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.man-img {
+    background-image: url("./images/man_coach_s.png");
+}
+
+.woman-img {
+    background-image: url("./images/woman_coach_s.png");
+}
+
+#about h2 {
+    font-family: Manrope;
+    margin: 20px 0;
+}
+
+#about p {
+    font-family: Manrope;
+}
+
+#about a {
+    text-decoration: none;
+    font-weight: 1000;
+}
+
+.man:hover, .man:focus,
+.woman:hover, .woman:focus {
+    transform: translateY(-2.5%);
+}
+
+.ico {display:none;}
+
+/* --------------------------------------- TIME ----------------------------------*/
+
+#time {
+    height: 60vh;
+    width: 100%;
+    background: var(--dark-color);
+    color: whitesmoke;
+    font-family: Manrope;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+table {
+    height: 70%;
+    font-size: 22px;
+}
+
+table,th,td {
+    text-align: center;
+    table-layout: fixed;
+    width: 75%;
+    border-collapse: collapse;
+    border: 3px solid rgba(255,0,0,.3);
+    border-top: transparent;
+    transition: 0.3s ease;
+}
+
+thead {
+    background: red;
+}
+
+td:hover,
+td:focus {
+    background: rgba(255,0,0,.7);
+}
+
+/* --------------------------------------- PAYMENT ----------------------------------*/
+
+#payment {
+    height: 70vh;
+    background: var(--light-color);
+    font-family: Manrope;
+}
+
+.cards {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card {
+    margin-top: 5%;
+    width: 300px;
+    height: 475px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    padding: 10px;
+    transition: 1s ease;
+    box-shadow: 0 10px 10px rgba(0,0,0,.5);
+    border-radius: 15px;
+}
+
+.card h3 {
+    font-size: 24px;
+    transform: translateY(-70px);
+}
+
+.card h4 {
+    font-size: 40px;
+    transform: translateY(-35px);
+}
+
+.card a {
+    text-decoration: none;
+    color: whitesmoke;
+    background: #FF0F00;
+    padding: 15px 55px;
+    border-radius: 5px;
+}
+
+.card-1 {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0, 0, 0, 0.7)), url("./images/dumbell.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.card-2 {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./images/treadmill.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.card-3 {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./images/group.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card:hover,
+.card:focus {
+    transform: translateY(-2.5%);
+}
+
+.card a:hover,
+.card a:focus {
+    background: rgba(255,0,0,.8)
+}
+
+/* --------------------------------------- PAYMENT ----------------------------------*/
+
+#contact {
+    height: 27vh;
+    width: 100vw;
+    background: var(--dark-color);
+    color: whitesmoke;
+    font-family: Manrope;
+}
+
+.holder {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.holder ul {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-right: 100px;
+}
+
+.holder ul li {
+    list-style: none;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.holder ul li p {
+    margin-right: 10px;
+}
+
+footer {
+    height: 3vh;
+    width: 100vw;
+    background: #0B0B0B;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 15px;
+}
+
+iframe {border: none;}

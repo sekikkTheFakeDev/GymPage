@@ -1,0 +1,188 @@
+body {
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #payment {
+        height: max-content;
+    }
+
+    .cards {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .card {
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+        width: 230px;
+        height: 400px;    
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card h4 {
+        font-size: 30px;
+    }
+
+    .card a {
+        padding: 10px 45px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 881px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #home {
+        height: 90vh;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        padding-left: 15px;
+        padding-right: 20px; 
+        margin-top: -5px;
+    }
+
+    .navbar ul{
+        display: none;
+    }
+    
+    .navbar p {
+        font-size: 45px ;
+        margin-left: -.1%;
+    }
+
+    .ico {
+        display: unset;
+        float: right;
+        font-size: 47px !important;
+        margin-left: 10px;
+        transform: translateY(-5px);
+    }
+
+    .text h1 {
+        font-size: 40px;
+        width: 80%;
+    }
+
+    .text p {
+        font-size: 22px;
+        width: 80%;
+    }
+
+    #about {
+        height: max-content;
+        overflow-x: hidden;
+    }
+
+    .man, .woman {
+        width: 240px;
+        height: 535px;    
+        margin-top: 30px;
+    }
+
+    .man-img, .woman-img {
+        width: 230px;
+        height: 230px;
+    }
+
+    #time {
+        overflow-x: hidden;
+    }
+
+    table {
+        font-size: 15px;
+    }
+
+    #payment {
+        height: max-content;
+        overflow-x: hidden;
+    }
+
+    .cards {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .card {
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+        width: 180px;
+        height: 355px;    
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card h4 {
+        font-size: 30px;
+    }
+
+    .card a {
+        padding: 10px 45px;
+    }
+
+    .holder {
+        margin-left: 100px;
+    }
+
+    iframe {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .text h1 {
+        font-size: 35px;
+        width: 55%;
+    }
+
+    .text p {
+        font-size: 18px;
+        width: 55%;    
+    }
+ 
+    table {
+        font-size: 12px;
+    }
+    
+}
+
+@media only screen and (max-width: 359px) {
+    body {
+        background: black;
+    }
+    section {
+        display: none;
+    }
+    #time {
+        background: black;
+    }
+    #time::after {
+        content: "VELIČINA EKRANA PREMALA!";
+        color: white;
+    }
+    table {
+        display: none;
+    }
+}
